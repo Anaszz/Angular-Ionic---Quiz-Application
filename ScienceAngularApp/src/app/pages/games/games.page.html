@@ -1,0 +1,27 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start" style="padding: 15px;" (click)="openFirst()">
+            <ion-icon name="menu"></ion-icon>
+          </ion-buttons>       
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content>
+    <ion-slides [options]="slideOpts" style="height: 100%;">
+   
+        <ion-slide>
+       </ion-slide>
+        <ion-slide class="flex-center-x-row" >
+          <div class="contentFlex content"  routerLink="/game-prehistoire">
+                  <ion-img src="./assets/logo.JPG"></ion-img> 
+                  <p>Prehistoire 1</p>
+         </div>
+      </ion-slide>
+
+        <ion-slide>
+         
+        </ion-slide>
+      </ion-slides>
+</ion-content>
+
+

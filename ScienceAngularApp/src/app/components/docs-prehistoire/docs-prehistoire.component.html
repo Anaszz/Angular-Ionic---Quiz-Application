@@ -1,0 +1,72 @@
+<div style="padding: 16px;">
+  <div style="width: 100%; display: flex; justify-content: center;">
+  <h2>La Prehistoire</h2>  
+  </div>
+
+  <p  style="margin-top: 50px;">Le Paléolithique est la première et la plus longue période de la Préhistoire, presque contemporaine du Pléistocène, durant laquelle les humains sont tous des chasseurs-cueilleurs. Les hommes du Paléolithique sont la plupart du temps nomades, se déplaçant au gré des saisons en fonction des ressources alimentaires disponibles, qu'elles soient végétales ou animales.</p>
+
+  <h4  style="margin-top: 30px;">La hache de pierre</h4>
+  <hr>
+  <div style="display: flex; justify-content: center; align-items: center; width: 100%; margin: 40px 0 40px 0;">
+    <div style="background: white; height: 9rem; width: 9rem; border: solid 2px white; border-radius: 16px; padding: 8px 6px 6px 6px">
+      <div style="background: white; height: 100%; width: 100%; border-radius: 12px; padding: 26px;">
+      <ion-img src="./assets/hache.png" style="width: 100%; height: 100%"></ion-img>
+      </div>
+</div>
+  </div>
+  <hr  style="margin-top: 30px;">
+<!-- intro-->
+<p  style="margin-top: 50px;">Le Paléolithique est la première et la plus longue période de la Préhistoire, presque contemporaine du Pléistocène, durant laquelle les humains sont tous des chasseurs-cueilleurs. Les hommes du Paléolithique sont la plupart du temps nomades, se déplaçant au gré des saisons en fonction des ressources alimentaires disponibles, qu'elles soient végétales ou animales.</p>
+
+<!-- Les prérequis-->
+<div style="background: #ece8cf; width: 100%; border-radius: 7px; padding: 15px; margin-top: 50px; margin-bottom: 40px;">
+  <p>PREREQUIS</p>
+  <hr>
+  <div style="display: flex; width: 100%; height: 9rem; align-items: center;">
+    <div style="background: white; height: 6rem; width: 6rem; border-radius: 9px; padding: 22px;"> 
+      <ion-img src="./assets/baton.png" style="width: 100%; height: 100%"></ion-img>
+    </div>
+    <div style="background: white; height: 6rem; width: 6rem; border-radius: 9px; margin-left: 10px; padding: 22px;">
+      <ion-img src="./assets/pierre.png" style="width: 100%; height: 100%"></ion-img>
+    </div>
+    <div style="background: white; height: 6rem; width: 6rem; border-radius: 9px; margin-left: 10px; padding: 22px;">
+      <ion-img src="./assets/corde.png" style="width: 100%; height: 100%"></ion-img>
+    </div>
+  </div>
+</div>
+
+<div *ngFor= "let objects of object; let i = index">
+<div style="width: 100%; margin-top: 30px; display: flex; flex-direction: row; align-items: center; ">
+  <div style="background: white ; height:4.1rem;  border: solid 2px W; width:4.2rem; border-radius: 7px; padding: 3px;">
+    <div style="background:white; height:4rem; width:4rem; border-radius: 7px; display: flex; justify-content: center; align-items: center;">
+    <ion-img src="./assets/{{objects.img}}" style="width: 9rem; height: 8.6rem;padding: 12px;"></ion-img>
+  </div>
+  </div>
+  <p style="font-size: 19px; margin: 0 0 5px 15px;">{{objects.name}}</p>
+</div>
+<p style="margin-top: 15px;">{{objects.description}}</p>
+</div>
+<p style="margin-top: 50px;">Maintenant que nous avons tout les outils en main. Il est temps passer aux fourneaux !</p>
+
+<!--building-->
+
+<ion-img src="./assets/senku2.png" style="width: 9rem; height: 9rem; margin-top: 60px; margin-bottom: 10px;"></ion-img>
+  <h3>Construction</h3>
+  <hr>
+  <p style="margin-top: 30px;">Le Paléolithique est la première et la plus longue période de la Préhistoire, presque contemporaine du Pléistocène, durant laquelle les humains sont tous des chasseurs-cueilleurs. Les hommes du Paléolithique sont la plupart du temps nomades, se déplaçant au gré des saisons en fonction des ressources alimentaires disponibles, qu'elles soient végétales ou animales.</p>
+
+<!-- anecdotes-->
+<div style="display: flex; flex-direction: column; align-items: flex-end;">
+  <ion-img src="./assets/senku3.png" style="width: 9rem; height: 8.6rem;"></ion-img>
+  <div style="background: white; width: 100%; border: solid 1px black; border-radius: 7px; padding: 15px; margin-top: 13px;">
+      <h4>Petite anecdote !</h4>
+      <p>Le Paléolithique est la première et la plus longue période de la Préhistoire,  qu'elles soient végétales ou animales.</p>
+  </div>
+  </div>
+
+  <p style="margin-top: 30px;">Le Paléolithique est la première et la plus longue période de la Préhistoire, presque contemporaine du Pléistocène, durant laquelle les humains sont tous des chasseurs-cueilleurs. Les hommes du Paléolithique sont la plupart du temps nomades, se déplaçant au gré des saisons en fonction des ressources alimentaires disponibles, qu'elles soient végétales ou animales.</p>
+  <p style="margin-top: 30px;"> des saisons en fonction des ressources alimentaires disponibles, qu'elles soient végétales ou animales.</p>
+
+
+</div>
+

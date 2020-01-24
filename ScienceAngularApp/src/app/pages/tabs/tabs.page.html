@@ -1,0 +1,80 @@
+<!-- Sidebar -->
+<ion-menu side="start" menuId="first" class="color-grey-ionTheme3" >
+    <ion-header>
+      <ion-toolbar class="color-grey-ionTheme">
+    
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="color-grey-ionTheme3 ion-padding">
+      <ion-list >
+          <ion-item (click)="hideSection(0)" class="color-grey-ionTheme3 font-chapter">
+           LA PREHISTOIRE 
+           <div style="padding: 2px; margin-left: 12px;" *ngIf="!isHide[0];">
+           <svg height='1.1rem' width='1.1rem'>
+            <line x1=0 y1=12  x2=6 y2=4 style="stroke: #656b70; stroke-width:2" />
+            <line x1=6 y1=4  x2=12 y2=12 style="stroke: #656b70; stroke-width:2" />
+          </svg>
+          </div>
+          <div *ngIf="isHide[0];" style="padding: 2px; margin-left: 12px;">
+            <svg height='1.1rem' width='1.1rem'>
+             <line x1=0 y1=4  x2=6 y2=12 style="stroke: #656b70; stroke-width:2" />
+             <line x1=6 y1=12  x2=12 y2=4 style="stroke: #656b70; stroke-width:2" />
+           </svg>
+           </div>
+          </ion-item>
+        <ion-item-group *ngIf="!isHide[0]">
+          <ion-item class="color-grey-ionTheme3 font-text"  routerLink="/tabs/docs/0" (click)="closeFirst()">Chapitre 1</ion-item> 
+          <ion-item class="color-grey-ionTheme3 font-text"  routerLink="/tabs/docs/0" (click)="closeFirst()">Chapitre 2</ion-item> 
+        </ion-item-group>
+
+        <ion-item (click)="hideSection(1)" class="color-grey-ionTheme3 font-chapter">
+          LE MOYEN-AGE
+          <div style="padding: 2px; margin-left: 12px;" *ngIf="!isHide[1];">
+            <svg height='1.1rem' width='1.1rem'>
+             <line x1=0 y1=12  x2=6 y2=4 style="stroke: #656b70; stroke-width:2" />
+             <line x1=6 y1=4  x2=12 y2=12 style="stroke: #656b70; stroke-width:2" />
+           </svg>
+           </div>
+           <div *ngIf="isHide[1];" style="padding: 2px; margin-left: 12px;">
+             <svg height='1.1rem' width='1.1rem'>
+              <line x1=0 y1=4  x2=6 y2=12 style="stroke: #656b70; stroke-width:2" />
+              <line x1=6 y1=12  x2=12 y2=4 style="stroke: #656b70; stroke-width:2" />
+            </svg>
+            </div>
+        </ion-item>
+        <ion-item-group *ngIf="!isHide[1]">
+          <ion-item class="color-grey-ionTheme3 font-text"  routerLink="/tabs/docs/1" (click)="closeFirst()">Chapitre 1</ion-item> 
+          <ion-item class="color-grey-ionTheme3 font-text"  routerLink="/tabs/docs/1" (click)="closeFirst()">Chapitre 2</ion-item> 
+          <ion-item class="color-grey-ionTheme3 font-text"  routerLink="/tabs/docs/1" (click)="closeFirst()">Chapitre 3</ion-item> 
+        </ion-item-group>
+      </ion-list>
+      <div class="flex">
+      <ion-button  fill="outline" routerLink="/" style="--color:#e6e6e6; margin-bottom: 20px;" (click)="closeFirst()">Retourner au Home</ion-button>
+      </div>
+     </ion-content>
+  </ion-menu>
+
+  <!-- fait marcher le sidebar en trafiquant la route-->
+  <ion-router-outlet main></ion-router-outlet>
+
+<!-- tabs -->
+<ion-tabs>
+  <ion-tab-bar slot="bottom" main>
+    <ion-tab-button tab="games">
+      <ion-icon name="calendar"></ion-icon>
+      <ion-label >game</ion-label>
+    </ion-tab-button>
+ 
+    <ion-tab-button tab="docs">
+      <ion-icon name="boat"></ion-icon>
+      <ion-label>Docs</ion-label>
+    </ion-tab-button>
+    
+    <ion-tab-button tab="account">
+      <ion-icon name="information-circle"></ion-icon>
+      <ion-label>account</ion-label>
+    </ion-tab-button>
+ 
+  </ion-tab-bar>
+ 
+</ion-tabs>  

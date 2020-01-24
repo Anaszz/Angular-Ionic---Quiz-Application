@@ -1,0 +1,17 @@
+
+    <div class="content"> 
+        <ion-card class="ion-activatable" [routerLink]="[id]"> 
+            <ion-ripple-effect></ion-ripple-effect>
+            <img *ngIf="background!= ''" src="/assets/{{background}}"/>
+            <ion-card-header>
+              <ion-card-subtitle>{{subtitle}}</ion-card-subtitle>
+              <ion-card-title>{{title}}</ion-card-title>
+            </ion-card-header>
+          
+            <ion-card-content>
+              {{content}}
+            </ion-card-content>
+          </ion-card>
+    </div>
+
+  

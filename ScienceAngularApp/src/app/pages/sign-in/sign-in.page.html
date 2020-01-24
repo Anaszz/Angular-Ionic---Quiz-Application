@@ -1,0 +1,64 @@
+<ion-header>
+
+</ion-header>
+
+
+<ion-content class="ion-padding">
+
+  <!-- stepper -->
+  <div>
+    <mat-horizontal-stepper labelPosition="bottom" linear #stepper errorMessage="Name is required.">
+      <mat-step [stepControl]="profileForm">
+        <form [formGroup]="profileForm" (ngSubmit)="onSubmit()"> <!--formulaire du groupe Formulaire 'profileForm' qui s'affiche quand la progress Bar a la valeur 0 -->
+          <!-- FORMULAIRE PART 1-->
+        <mat-form-field>
+          <input matInput placeholder="Prenom" formControlName="firstName" required>  <!--correspond à la valeur 'firstname" du FormGroup profileForm -->
+        </mat-form-field>
+        
+        <mat-form-field>
+          <input matInput placeholder="Nom" formControlName="lastName" >
+        </mat-form-field>
+   
+        <mat-form-field>
+          <input matInput placeholder="Email" formControlName="email" >
+        </mat-form-field>
+
+       <mat-form-field>
+          <input matInput placeholder="Mots de passe" formControlName="password" >
+        </mat-form-field>
+        <button class="btn btn-primary"  matStepperNext ion-button (click)='onSubmit()' >Nexxxxxxxt Step</button>
+    </form>
+     </mat-step>
+        
+      <mat-step [stepControl]="profileForm" optional>
+        <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+          
+          <mat-form-field>
+           <input matInput placeholder="Ville" formControlName="city" >
+         </mat-form-field>
+         <mat-form-field>
+           <input matInput placeholder="Departement" formControlName="department" >
+         </mat-form-field>
+         <mat-form-field>
+           <input matInput placeholder="adresse" formControlName="addressName" >
+         </mat-form-field>
+         <mat-checkbox>Hide required marker</mat-checkbox>
+           <button type="submit" class="btn btn-primary" ion-button (click)="onSubmitStep()" [disabled]="!profileForm.valid">Submit</button>
+         </form>       
+      </mat-step>
+
+      <mat-step [stepControl]="profileForm" optional>
+        you'r done motherfucker     
+      </mat-step>
+  </mat-horizontal-stepper>
+  </div>
+
+
+ <!-- les formulaires-->
+     <div>
+       
+            <!-- FORMULAIRE PART 2-->
+         
+        </div>
+    
+      </ion-content>

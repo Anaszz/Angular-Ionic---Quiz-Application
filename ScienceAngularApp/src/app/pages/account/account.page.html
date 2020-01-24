@@ -1,0 +1,80 @@
+<ion-header>
+    <div class="head">
+        <div style="padding: 25px 20px 20px 20px; display: flex; justify-content: space-between; color: white; font-size: 22px;" >
+            <ion-icon name="menu" (click)="openFirst()"></ion-icon>
+            <ion-icon name="more"></ion-icon>
+        </div>
+          
+          <div class="contentFlex">
+            <ion-avatar style="height: 7rem; width: 7rem">
+                <ion-img src="./assets/patrik.jpg"></ion-img> 
+            </ion-avatar>
+          <div class="contentFlexMargin">
+            <h2 style="font-size: 1.1rem; margin-bottom: 0; color: white;">Patrick Dalal</h2>
+            <p  style="font-size: 0.8rem; color:#DADADA;">Chercheur</p>
+          </div>    
+        </div>
+          <div style="display: flex; justify-content: space-around; margin-top: 13px;">
+            <div style="border-bottom: solid white; display: flex; width: 20%; justify-content: center; color: white;">
+              General
+            </div>   
+            <div routerLink="/tabs/profile-details" style="display: flex; width: 20%; justify-content: center;color: white;">
+              Details
+            </div>    
+            <div routerLink="/tabs/profile-messages" style="display: flex; width: 20%; justify-content: center;color: white;">
+              Messages
+            </div>   
+          </div>    
+    </div>
+</ion-header>
+
+<ion-content>
+  <div style="padding: 16px; background: #f7f9fc; width: 100%; height: 100%;">
+  <div style="padding: 4px 0 0 10px; border-radius: 10px 10px 0 0; background: linear-gradient(#47feb0, #1de3ca); height: 2rem; margin-top: 30px; width: 40%;">
+  <p class="text4">Succès récent</p>
+  </div>
+  <div style="height: 17%; background: white; display: flex; flex-direction: row; justify-content: space-between; box-shadow: 2px 5px 10px #e0dfdf">
+   <div style="height: 100%; width:18% ; background: linear-gradient(#47feb0, #1de3ca); display: flex; justify-content: center; align-items: center;  font-size: 30px; color: white;">
+     <ion-icon name="trophy"></ion-icon>
+  </div>
+   <div style="padding: 12.5px 50px 15px 30px; width: 82%;">
+    <p style="font-size: 18px; margin: 0; font-family: Roboto;">Façonneur de pierre</p> 
+      <p class="text-justify text-truncate text">Réussir toutes les questions sur l'âge de pierre<ion-icon name="checkmark"></ion-icon></p>
+  </div>
+   <div style="height: 100%; width:1% ; background:  linear-gradient(#47feb0, #1de3ca);"></div>
+  </div>
+
+    <div style="height: 58%; background: white; margin-top: 30px; box-shadow: 2px 5px 10px #e0dfdf">
+      <div style="height: 28%; width: 100%; display: flex; flex-direction: row; justify-content: space-between;">   
+        <div style="height: 100%; width:1% ; background: linear-gradient(#ee699d,#fb5b67)"></div>
+        <div style="margin-right: 30%; padding: 10px;">
+          <p style="font-size: 22px; margin: 0; font-family: Roboto;">My Goals</p> 
+          <p class="text2">Statistiques générales</p>
+        </div>
+        <div style="height: 100%; width:18% ; background: linear-gradient(#ee699d,#fb5b67);display: flex; justify-content: center; align-items: center;  font-size: 30px; color: white;">
+          <ion-icon name="flag"></ion-icon>
+        </div>
+       </div>
+      <div style="height: 80%; width: 100%; display: flex; flex-direction: row;">
+         <div style="height: 100%; width: 57%; display: flex; justify-content: center;"> 
+           <highcharts-chart 
+            [Highcharts]="Highcharts"
+            [options]="chartOptions"
+            style="width: 90%; height: 90%; display: block;">
+           </highcharts-chart>
+        </div> 
+         <div style="height: 100%; width: 1%;">
+          <svg height="100%" width="3px">
+            <line x1=0 y1=15% x2=0 y2=85% style="stroke: #DADADA ;stroke-width:2"></line>
+          </svg>
+        </div>
+        <div style="height: 100%; width: 42%; padding: 35px 20px 25px 22px;">
+          <p class="text3">parties joués</p>
+          <p  class="text">4</p> 
+          <p class="text3">Succès</p>
+           <p  class="text">2</p>
+        </div>
+      </div>
+   </div>
+ </div>
+</ion-content>

@@ -1,0 +1,39 @@
+<ion-header>
+  <div class="head">
+      <div style="padding: 25px 20px 20px 20px; display: flex; justify-content: space-between; color: white; font-size: 22px;" >
+          <ion-icon name="arrow-back"></ion-icon> 
+          <ion-icon name="more"></ion-icon>
+      </div>
+
+        <div style="display: flex; justify-content: space-around; margin-top: 13px;">
+          <div routerLink="/tabs/account"  style="display: flex; width: 20%; justify-content: center; color:white">
+            General
+          </div>   
+          <div routerLink="/tabs/profile-details" style="display: flex; width: 20%; justify-content: center;color:white">
+            Details
+          </div>    
+          <div   style="border-bottom: solid white; display: flex; width: 20%; justify-content: center;color:white">
+            Messages
+          </div>   
+        </div>    
+  </div>
+</ion-header>
+
+
+<ion-content>
+  <div style="background: #f7f9fc; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;">
+      <div style="margin-bottom: 12rem; height: 17rem; width: 17rem; display: flex; align-items: center; flex-direction: column; font-size: 26px;">
+      <img src="/assets/build.png"/>
+      <p style="margin-top: 20px;">En construction..</p>
+      </div>
+    
+    <div style="padding: 15px; background: white; width: 100%; height: 10%; position: absolute; bottom: 0;  display: flex; align-items: center; flex-direction: row; justify-content: space-between;">
+    <ion-icon name="camera"></ion-icon>
+    <div style="border-radius: 40px; padding: 18px; background: #f7f9fc; width: 80%; height: 2.5rem; display: flex; align-items: center; flex-direction: row; justify-content: space-between;">
+     Ecrivez un messages...
+     <ion-icon name="mic"></ion-icon>
+    </div>
+    <ion-icon name="send"></ion-icon>  </div>
+</div>
+
+</ion-content>

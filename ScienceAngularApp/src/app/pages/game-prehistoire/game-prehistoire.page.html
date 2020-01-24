@@ -1,0 +1,53 @@
+<div style="display: flex; flex-direction: row; align-items: center;">
+<div style="padding: 14px;" routerLink="/tabs/games">
+  <svg height="17" width="17">
+    <line x1="0" y1="0" x2="17" y2="17" class="crossbar" />
+    <line x1="17" y1="0" x2="0" y2="17" class="crossbar" />
+  </svg>
+</div>       
+<div class="progress" style="width: 15rem; border-radius: 17px; margin-left: 10px;">
+  <div class="progress-bar" role="progressbar" [ngStyle]="{'width': progress(), 'border-radius': '17px', 'background-color': '#84dc00'}" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+  <div style="display: flex; margin-top: 3px; margin-left: 10px; padding: 14px;">
+  <ion-icon name="heart"  [ngClass]="{'red-heart': true, 'grey-heart': life === 0}"></ion-icon>
+  <ion-icon name="heart" [ngClass]="{'red-heart': true, 'grey-heart': life <= 1}"></ion-icon>
+  <ion-icon name="heart" [ngClass]="{'red-heart': true, 'grey-heart': life <= 2}"></ion-icon>
+  </div>
+</div>
+
+<ion-content>
+  <div style="padding: 16px;width: 100%; height: 100%;">
+    <div>
+    <h3 class="font-question">{{questions[id].questionText}}</h3>
+  </div>
+
+  <div class="flex-center-x-column2">
+    <div style="width: 100%; margin-top: 28%;">
+       <div  *ngFor="let answer of questions[id].answers; let i = index;" (click)="activeButton(i)"
+        [ngClass]="{'button-class': true, 'button-class-active': isActive[i] === true}" >
+          {{answer.answer}}
+        </div>
+     </div>
+</div>
+<!-- check buttons et div de validation-->
+
+<div  class="button-check-disabled" *ngIf="disabledButton">
+CHECK
+</div>
+
+<div (click)="check()"
+class="button-check"  *ngIf="CheckButton === true && !disabledButton">
+ CHECK
+</div>
+<div (click)="validated()"
+[ngClass]="{'button-check': true,
+  'button-check-active': solutionDiv === true,
+  'button-check-false': solutionDiv === false}"  *ngIf="CheckButton === false">
+ NEXT
+</div>
+</div>
+<div [ngClass]="{'false-div': solutionDiv === false, 'correct-div': solutionDiv === true }" *ngIf="CheckButton === false">
+<p [ngClass]="{'false-title': solutionDiv === false, 'correct-title': solutionDiv === true }">{{ solutionTitle }}</p>
+<p [ngClass]="{'false-text': solutionDiv === false}"> {{ solutionText }}</p>
+</div>
+</ion-content>

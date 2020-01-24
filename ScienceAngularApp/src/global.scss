@@ -1,0 +1,154 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+//My global scss
+#mainContentFlex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5%;
+}
+
+.contentFlex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flex-center-x-column{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4rem;
+    padding: 3%
+}
+
+.flex-center-x-column2{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4rem;
+}
+
+
+.flex-center-y-row{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-center-x-row{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.flex-center-y-column{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4rem;
+    padding: 3%
+}
+
+
+.flex-space-between{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex-space-around{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.flex-right-x{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.contentFlexMargin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+    width: 100%;
+}
+
+
+.ion-activatable {
+    position: relative;
+    overflow: hidden;
+  }
+  
+.full-length{
+width: 100%;    
+}
+
+//color theme
+
+.color-grey-theme{
+   background: #001e3c;   
+    }
+    
+.color-grey-theme2{
+    background: #1a3f61d0;   
+    }
+
+.color-grey-theme3{
+    background: #051422c0;   
+  
+}
+
+.color-transparent{
+    background: transparent !important;
+  
+}
+.color-grey-ionTheme{
+    --background: #001e3c;   
+     }
+     
+ .color-grey-ionTheme2{
+    --background: #1a3f61d0;   
+     }
+ 
+ .color-grey-ionTheme3{
+    --background: #051422c0;   
+   
+ }
+

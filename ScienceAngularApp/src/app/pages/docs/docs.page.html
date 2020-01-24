@@ -1,0 +1,14 @@
+  <div style="background: #001e3c; height: 9%; display: flex; align-items: center;"> 
+      <ion-buttons slot="start" style="padding: 15px;">
+          <ion-icon name="list"  (click)="openFirst()" style="color: white; font-size: 22px;"></ion-icon>
+          
+      </ion-buttons>       
+  </div>
+
+<ion-content class="ion-padding">
+  <app-docs-item
+    *ngFor= "let docscontent of docsContent; let i = index" 
+    [id]="i"  [background]='docscontent.background' [subtitle]='docscontent.subtitle' [title]='docscontent.title' [content]='docscontent.content'
+    >
+</app-docs-item>
+</ion-content>
